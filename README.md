@@ -18,10 +18,10 @@ Assumptions you can make:
 1.	The API’s don’t need a backend store. It can be an in-memory store.
 
 
-FAQ:
-1. Can a discount code be used multiple times?
+## FAQ:
+**Q**: Can a discount code be used multiple times?
 
-Discount code can be requested by every user, but is made available for every nth order only. The discount code can be used only once before the next one becomes available on the next nth order.
+**A**: Discount code can be requested by every user, but is made available for every nth order only. The discount code can be used only once before the next one becomes available on the next nth order.
 
 
 All the best!
