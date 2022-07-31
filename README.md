@@ -23,5 +23,8 @@ Assumptions you can make:
 
 **A**: Discount code can be requested by every user, but is made available for every nth order only. The discount code can be used only once before the next one becomes available on the next nth order.
 
+**Q**: Does the discount code apply to one item?
+
+**A**: Discount code applies to the entire order.
 
 All the best!
