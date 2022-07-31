@@ -20,6 +20,7 @@ Assumptions you can make:
 
 FAQ:
 1. Can a discount code be used multiple times?
+
 Discount code can be requested by every user, but is made available for every nth order only. The discount code can be used only once before the next one becomes available on the next nth order.
 
 
