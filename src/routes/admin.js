@@ -1,48 +1,53 @@
 const express = require("express");
 const { getAllOrders } = require("../../data/orders");
+const { getPurchaseSummary } = require("../controllers/admin");
 const router = express.Router();
 
-/*
-    GET /discountCode
-    Purpose: Get discount code
-    Params: null
-*/
-
+/**
+ * @swagger
+ * /admin/discountCode:
+ *   get:
+ *     summary: Generate discount code for every second order
+ *     description: Generate discount code for every second order
+ *     responses:
+ *       '200':
+ *         description: Successful response.
+ *       '404':
+ *         description: Resource not found.
+ */
 router.get("/discountCode", (req, res) => {
-  let ordersPlaced = getAllOrders();
-  if (ordersPlaced.length % 2 === 1) {
-    res.json({ discountCode: "10OFF" }).status(200);
-  } else {
-    res.json({ message: `No discount available for ${ordersPlaced.length + 1} order` }).status(200);
+  try {
+    let ordersPlaced = getAllOrders();
+    if (ordersPlaced.length % 2 === 1) {
+      res.status(200).json({ discountCode: "10OFF" });
+    } else {
+      res.status(200).json({ message: `No discount available for ${ordersPlaced.length + 1} order` });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.message });
   }
 });
 
-/*
-    GET /purchaseSummary
-    Purpose: Get purchase summary
-    Params: null
-*/
+/**
+ * @swagger
+ * /admin/purchaseSummary:
+ *   get:
+ *     summary: Get purchase summary of all orders placed till now
+ *     description: Retrieve information from the server for totalAmount, totalDiscount, purchasedItems, discountCodes.
+ *     responses:
+ *       '200':
+ *         description: Successful response.
+ *       '404':
+ *         description: Resource not found.
+ */
 router.get("/purchaseSummary", (req, res) => {
-  let ordersPlaced = getAllOrders();
-
-  let itemsPurchased = [],
-    totalAmount = 0,
-    discountCodes = [],
-    totalDiscountAmount = 0;
-  ordersPlaced.forEach((order, index) => {
-    totalAmount += order.totalPrice;
-    console.log("total price", order.totalPrice, totalAmount);
-    itemsPurchased.push(
-      ...order.product.flatMap((item) => {
-        return { id: item.id };
-      })
-    );
-    if (order.discount) {
-      discountCodes.find((code) => code === order.discountCode) ? null : discountCodes.push(order.discountCode);
-      totalDiscountAmount += (order.totalPrice * parseInt(order.discount.split("%")[0])) / 100;
-      console.log(totalDiscountAmount);
-    }
-  });
-  res.send({ totalAmount, totalDiscountAmount, discountCodes, itemsPurchased }).status(200);
+  try {
+    let summaryDetails = getPurchaseSummary();
+    res.status(200).send(summaryDetails);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.message });
+  }
 });
 module.exports = router;
