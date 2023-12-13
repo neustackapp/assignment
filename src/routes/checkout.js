@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const items = require("../../data/products.js");
-const { purchase } = require("../controllers/cart.js");
+const { purchase } = require("../controllers/checkout.js");
 const { addOrders, getAllOrders } = require("../../data/orders.js");
 
 /*
@@ -20,10 +20,10 @@ router.post("/", (req, res) => {
     // getting orders placed till now
     let ordersPlaced = getAllOrders();
     let order = {};
-    // Checking if discount code is valid
-    if (discountCode && ordersPlaced.length % 2 === 1) {
+    //! Checking if discount code is valid, need to compare with discount codes available in DB taking 10OFF for now
+    if (discountCode === '10OFF' && ordersPlaced.length % 2 === 1) {
       // every 2nd order will be getting discount, Fixing n=2 for now
-      order = purchase(email, cartData, 10);
+      order = purchase(email, cartData, 10, discountCode);
     } else {
       order = purchase(email, cartData);
     }

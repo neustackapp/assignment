@@ -1,7 +1,9 @@
 const items = require("../../data/products.js");
+const { v4: uuidv4 } = require("uuid");
 
-const purchase =  (email, cartData, discount=0) => {
+const purchase =  (email, cartData, discount=0, discountCode='') => {
      let order = {
+       id: uuidv4(),
        email: email,
        product: [],
      };
@@ -23,8 +25,9 @@ const purchase =  (email, cartData, discount=0) => {
       }
     });
     order.totalPrice = totalPrice;
-    if(discount){
+    if(discount && discountCode){
         order.discount = `${discount}%`;
+        order.discountCode = discountCode;
         order.totalPrice = totalPrice - (totalPrice * discount)/100;
     }
     return order;
