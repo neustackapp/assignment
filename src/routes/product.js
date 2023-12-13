@@ -5,9 +5,7 @@ const items = require("../../data/products.js");
 // create a dummy router with product id as a parameter
 
 router.get('/', (req, res) => {
-    console.log("getting here")
-    console.log(items);
-    res.json(items);
+    res.json(items).status(200);
 })
 
 module.exports = router;
