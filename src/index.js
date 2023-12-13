@@ -1,8 +1,8 @@
 const express = require('express');
 require('dotenv').config();
 const productRoute = require('./routes/product');
-const cartRoute = require('./routes/cart');
-const ordersRoutes = require('./routes/orders')
+const ordersRoutes = require('./routes/orders');
+const purchaseRoute = require('./routes/purchase');
 
 const app = express();
 const router = express.Router();
@@ -18,8 +18,9 @@ app.use('/orders', ordersRoutes)
 
 //  products routes
 app.use('/products', productRoute);
-// cart routes
-app.use('/cart', require('./routes/cart'));
+
+// purchase routes
+app.use('/purchase', purchaseRoute);
 
 // creating a dummy route
 app.get('/', (req, res) => {
