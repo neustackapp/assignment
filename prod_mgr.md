@@ -29,8 +29,8 @@ Assume you are considering three potential AI-driven features for the next produ
 2. Automated Data Extraction & Structuring – Converts unstructured data (e.g., invoices, resumes, or customer feedback) into structured formats.
 3. AI-Driven Workflow Automation – Uses reasoning models to automate decisions, such as approving/rejecting requests based on extracted data.
 
-- Which feature should be prioritized first? Justify your decision using a prioritization framework of your choice (e.g., RICE, impact vs. effort, Kano Model).
-- What is the MVP (Minimum Viable Product) scope for your chosen feature?
+- Which feature should be prioritized first? 
+- What is the MVP (Minimum Viable Product) scope for your chosen feature? What would the iterative next versions look like?
 - How would you use data to validate your prioritization decision?
 
 ## Part 3: AI Feasibility & Go-To-Market Plan
