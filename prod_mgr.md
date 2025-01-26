@@ -1,4 +1,4 @@
-# Scenario:
+# Scenario
 
 Imagine you are a Product Manager at a fast-growing AI company building next-generation productivity tools. Your team is working on an AI-powered document intelligence platform that helps professionals extract insights, summarize key information, and automate repetitive tasks.
 
@@ -10,7 +10,7 @@ The company’s Applied Data Science and Research Labs have recently developed a
 
 Your job is to define how this AI innovation should be transformed into a real product feature that delivers value to users.
 
-# Your Task:
+# Your Task
 You are the Product Manager responsible for bringing this AI-driven underwriting assistant to life.
 
 ## Part 1: Writing a Feature PRD/User Story
@@ -40,13 +40,17 @@ What technical and business considerations must be addressed before launching th
 How would you validate and refine the AI model before a full rollout?
 How would you drive user adoption, and what KPIs would you track post-launch?
 
-Submission Format:
+## Submission Format
 Preferred Format: PDF or Google Docs
 Concise but structured responses – bullet points, tables, and frameworks are encouraged.
 Feel free to include visuals, mockups, or data-driven examples.
 
-Evaluation Criteria:
+## Evaluation Criteria
+
 ✅ Product Thinking
+
 ✅ Prioritization & Decision-Making
-✅ Technical Feasibility 
+
+✅ Technical Feasibility
+
 ✅ Communication
