@@ -1,0 +1,1 @@
+export let discountCode = 'abc123';
