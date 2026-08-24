@@ -1,0 +1,892 @@
+[
+  {
+    "id": "sub_1042",
+    "applicant": { "name": "Alex Morgan", "email": "alex.morgan@example.com" },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 25000000,
+    "submittedAt": "2026-11-01T08:30:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "COVERAGE_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-1842",
+      "dateOfBirth": "1987-04-18",
+      "phone": "+1-206-555-0142",
+      "address": { "line1": "413 Alder Street", "line2": null, "city": "Seattle", "state": "WA", "postalCode": "98104" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2021-06-14", "annualSalaryCents": 9200000, "occupation": "Plant supervisor", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 25000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 15000000, "effectiveDate": "2025-01-01", "policyNumber": "VL-881204" },
+    "reviewSignals": [
+      { "code": "COVERAGE_MISMATCH", "severity": "HIGH", "field": "election.requestedCoverageCents", "message": "Requested coverage differs from the amount received from the enrollment platform." },
+      { "code": "INCREASE_REQUIRES_REVIEW", "severity": "MEDIUM", "field": "existingCoverage.coverageAmountCents", "message": "The requested increase exceeds the plan's automatic approval threshold." }
+    ]
+  },
+  {
+    "id": "sub_1043",
+    "applicant": { "name": "Priya Shah", "email": null },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Short-Term Disability",
+    "coverageAmountCents": 180000,
+    "submittedAt": "2026-11-01T14:05:12Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "MISSING_INFORMATION",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-2091",
+      "dateOfBirth": "1992-09-03",
+      "phone": "+1-425-555-0191",
+      "address": { "line1": "88 Lakeview Drive", "line2": "Apt 4C", "city": "Bellevue", "state": "WA", "postalCode": "98004" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2024-03-11", "annualSalaryCents": 7800000, "occupation": "Quality analyst", "hoursPerWeek": 40 },
+    "election": { "planName": "STD 60%", "requestedCoverageCents": 180000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "EMAIL_MISSING", "severity": "HIGH", "field": "applicant.email", "message": "No email address was supplied for the employee." }
+    ]
+  },
+  {
+    "id": "sub_1044",
+    "applicant": { "name": "Jordan Lee", "email": "jordan.lee@canyon.example" },
+    "group": { "id": "grp_canyon", "name": "Canyon Ridge Hospitality" },
+    "product": "Accident",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-01T09:14:00-07:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DUPLICATE_RECORD",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "CRH-4408",
+      "dateOfBirth": "1989-12-22",
+      "phone": "+1-702-555-0108",
+      "address": { "line1": "700 Spring Mountain Road", "line2": null, "city": "Las Vegas", "state": "NV", "postalCode": "89109" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2019-10-07", "annualSalaryCents": 6100000, "occupation": "Events manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Plus", "requestedCoverageCents": 5000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "POSSIBLE_DUPLICATE", "severity": "MEDIUM", "field": "employee.employeeId", "message": "A second submission has similar applicant details. Compare stable identifiers before deciding." }
+    ]
+  },
+  {
+    "id": "sub_1045",
+    "applicant": { "name": "Jordan Lee", "email": "jordan.lee@northstar.example" },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Accident",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-01T09:14:03-07:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DUPLICATE_RECORD",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-4410",
+      "dateOfBirth": "1991-02-09",
+      "phone": "+1-425-555-0110",
+      "address": { "line1": "2310 148th Avenue", "line2": null, "city": "Redmond", "state": "WA", "postalCode": "98052" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2020-02-24", "annualSalaryCents": 6750000, "occupation": "Maintenance coordinator", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Plus", "requestedCoverageCents": 5000000, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "POSSIBLE_DUPLICATE", "severity": "MEDIUM", "field": "employee.employeeId", "message": "A second submission has similar applicant details. Compare stable identifiers before deciding." }
+    ]
+  },
+  {
+    "id": "sub_1046",
+    "applicant": { "name": "José Álvarez", "email": "jose.alvarez@sol.example" },
+    "group": { "id": "grp_sol", "name": "Sol y Mar Foods" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 3000000,
+    "submittedAt": "2026-11-02T00:08:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "IDENTITY_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "SYM-0198",
+      "dateOfBirth": "1979-07-14",
+      "phone": "+1-305-555-0198",
+      "address": { "line1": "104 Calle Ocho", "line2": null, "city": "Miami", "state": "FL", "postalCode": "33135" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2017-08-21", "annualSalaryCents": 5900000, "occupation": "Distribution lead", "hoursPerWeek": 40 },
+    "election": { "planName": "Critical Illness $30K", "requestedCoverageCents": 3000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 3000000, "effectiveDate": "2026-01-01", "policyNumber": "CI-10468" },
+    "reviewSignals": [
+      { "code": "NAME_NORMALIZATION", "severity": "HIGH", "field": "applicant.name", "message": "The HR record contains 'Jose Alvarez'; the enrollment submission contains diacritics." }
+    ]
+  },
+  {
+    "id": "sub_1047",
+    "applicant": { "name": "Zoë O'Connor", "email": "zoe.oconnor@harbor.example" },
+    "group": { "id": "grp_harbor", "name": "Harbor & Pine Consulting" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 10000000,
+    "submittedAt": "2026-11-02T07:42:19Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "BENEFICIARY_MISSING",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "HP-771",
+      "dateOfBirth": "1996-05-27",
+      "phone": null,
+      "address": { "line1": "22 Pine Street", "line2": null, "city": "Portland", "state": "ME", "postalCode": "04101" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2025-05-19", "annualSalaryCents": 7200000, "occupation": "Consultant", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 10000000, "beneficiaryCount": 0, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "BENEFICIARY_MISSING", "severity": "LOW", "field": "election.beneficiaryCount", "message": "No beneficiary was included with the life election." }
+    ]
+  },
+  {
+    "id": "sub_1048",
+    "applicant": { "name": "Wei Li", "email": "wei.li@example.com" },
+    "group": null,
+    "product": "Hospital Indemnity",
+    "coverageAmountCents": 2000000,
+    "submittedAt": "2026-11-02T11:31:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "GROUP_NOT_FOUND",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "EXT-9003",
+      "dateOfBirth": "1984-11-06",
+      "phone": "+1-312-555-0103",
+      "address": { "line1": "1900 W Lake Street", "line2": "Unit 8", "city": "Chicago", "state": "IL", "postalCode": "60612" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2023-01-09", "annualSalaryCents": 8100000, "occupation": "Operations analyst", "hoursPerWeek": 40 },
+    "election": { "planName": "Hospital Indemnity Enhanced", "requestedCoverageCents": 2000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "GROUP_NOT_FOUND", "severity": "HIGH", "field": "group", "message": "The group identifier in the source file does not match a configured employer group." }
+    ]
+  },
+  {
+    "id": "sub_1049",
+    "applicant": { "name": "Amara Okafor", "email": "amara.okafor@meridian.example" },
+    "group": { "id": "grp_meridian", "name": "Meridian Community Health" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 0,
+    "submittedAt": "2026-11-02T13:20:00-06:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "ZERO_COVERAGE",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "MCH-2281",
+      "dateOfBirth": "1990-08-16",
+      "phone": "+1-214-555-0181",
+      "address": { "line1": "901 Elm Street", "line2": null, "city": "Dallas", "state": "TX", "postalCode": "75202" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2022-07-18", "annualSalaryCents": 6850000, "occupation": "Care coordinator", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 0, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 5000000, "effectiveDate": "2026-01-01", "policyNumber": "VL-002281" },
+    "reviewSignals": [
+      { "code": "ZERO_COVERAGE", "severity": "MEDIUM", "field": "election.requestedCoverageCents", "message": "The election was submitted with a zero coverage amount." }
+    ]
+  },
+  {
+    "id": "sub_1050",
+    "applicant": { "name": "Theodore Montgomery-Worthington III", "email": "theodore.montgomery-worthington@example.com" },
+    "group": { "id": "grp_long", "name": "The Metropolitan Association for Advanced Environmental Research and Public Infrastructure" },
+    "product": "Supplemental Employee Voluntary Term Life and Accidental Death & Dismemberment",
+    "coverageAmountCents": 50000000,
+    "submittedAt": "2026-11-02T23:58:41-08:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "EVIDENCE_REQUIRED",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "MAAERPI-000000417",
+      "dateOfBirth": "1972-03-02",
+      "phone": "+1-415-555-0417",
+      "address": { "line1": "1777 Extremely Long Boulevard Name", "line2": "Building Twelve, Suite 450", "city": "San Francisco", "state": "CA", "postalCode": "94105" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2008-09-15", "annualSalaryCents": 24500000, "occupation": "Executive director of environmental infrastructure programs", "hoursPerWeek": 45 },
+    "election": { "planName": "Supplemental Employee Voluntary Term Life and AD&D", "requestedCoverageCents": 50000000, "beneficiaryCount": 3, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 25000000, "effectiveDate": "2024-01-01", "policyNumber": "VL-EXTREMELY-LONG-000417" },
+    "reviewSignals": [
+      { "code": "EVIDENCE_REQUIRED", "severity": "HIGH", "field": "election.requestedCoverageCents", "message": "The requested amount exceeds the guaranteed-issue limit and requires evidence of insurability." }
+    ]
+  },
+  {
+    "id": "sub_1051",
+    "applicant": { "name": "Maya Patel", "email": "maya.patel@atlas.example" },
+    "group": { "id": "grp_atlas", "name": "Atlas Retail Cooperative" },
+    "product": "Long-Term Disability",
+    "coverageAmountCents": 420000,
+    "submittedAt": "2026-11-03",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DATE_PRECISION",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "ARC-3512",
+      "dateOfBirth": "1988-01-30",
+      "phone": "+1-404-555-0112",
+      "address": { "line1": "640 Peachtree Street", "line2": null, "city": "Atlanta", "state": "GA", "postalCode": "30308" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2021-11-08", "annualSalaryCents": 8400000, "occupation": "Regional buyer", "hoursPerWeek": 40 },
+    "election": { "planName": "LTD 60%", "requestedCoverageCents": 420000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "DATE_PRECISION", "severity": "LOW", "field": "submittedAt", "message": "The source provided a calendar date without a submission time or offset." }
+    ]
+  },
+  {
+    "id": "sub_1052",
+    "applicant": { "name": "Noah Williams", "email": "noah.williams@canyon.example" },
+    "group": { "id": "grp_canyon", "name": "Canyon Ridge Hospitality" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 20000000,
+    "submittedAt": "2026-11-03T06:55:10-07:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "SALARY_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "CRH-5520",
+      "dateOfBirth": "1982-06-11",
+      "phone": "+1-702-555-0120",
+      "address": { "line1": "519 Desert Inn Road", "line2": null, "city": "Las Vegas", "state": "NV", "postalCode": "89109" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2018-04-02", "annualSalaryCents": 9800000, "occupation": "Hotel general manager", "hoursPerWeek": 50 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 20000000, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 10000000, "effectiveDate": "2025-01-01", "policyNumber": "VL-CRH-5520" },
+    "reviewSignals": [
+      { "code": "SALARY_MISMATCH", "severity": "HIGH", "field": "employment.annualSalaryCents", "message": "The HRIS salary differs from the salary used to calculate the requested benefit." }
+    ],
+    "_behavior": { "firstDecisionFails": true }
+  },
+  {
+    "id": "sub_1053",
+    "applicant": { "name": "Fatima Rahman", "email": "fatima.rahman@meridian.example" },
+    "group": { "id": "grp_meridian", "name": "Meridian Community Health" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 2000000,
+    "submittedAt": "2026-11-03T10:17:30-06:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DEPENDENT_ELIGIBILITY",
+    "priority": "MEDIUM",
+    "status": "AWAITING_DOCUMENTS",
+    "employee": {
+      "employeeId": "MCH-3208",
+      "dateOfBirth": "1994-10-25",
+      "phone": "+1-214-555-0108",
+      "address": { "line1": "70 Ross Avenue", "line2": "Apt 12", "city": "Dallas", "state": "TX", "postalCode": "75201" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2023-06-05", "annualSalaryCents": 7400000, "occupation": "Nurse educator", "hoursPerWeek": 36 },
+    "election": { "planName": "Critical Illness Family", "requestedCoverageCents": 2000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "DEPENDENT_DOCUMENT_REQUIRED", "severity": "MEDIUM", "field": "election", "message": "Documentation is required to verify a dependent's eligibility." }
+    ]
+  },
+  {
+    "id": "sub_1054",
+    "applicant": { "name": "Eli Thompson", "email": "eli.thompson@northstar.example" },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Accident",
+    "coverageAmountCents": 2500000,
+    "submittedAt": "2026-11-03T18:46:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": null,
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-7782",
+      "dateOfBirth": "1998-12-04",
+      "phone": "+1-425-555-0182",
+      "address": null
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2026-08-17", "annualSalaryCents": 5200000, "occupation": "Assembly technician", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Basic", "requestedCoverageCents": 2500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": []
+  },
+  {
+    "id": "sub_1055",
+    "applicant": { "name": "Grace Kim", "email": "grace.kim@atlas.example" },
+    "group": { "id": "grp_atlas", "name": "Atlas Retail Cooperative" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 99999999900,
+    "submittedAt": "2026-11-04T00:02:00+14:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "AMOUNT_OUTLIER",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "ARC-7001",
+      "dateOfBirth": "1985-02-19",
+      "phone": "+1-404-555-0101",
+      "address": { "line1": "1400 Market Street", "line2": null, "city": "Atlanta", "state": "GA", "postalCode": "30303" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2015-09-28", "annualSalaryCents": 10500000, "occupation": "Merchandising director", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 99999999900, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 20000000, "effectiveDate": "2026-01-01", "policyNumber": "ARC-VL-7001" },
+    "reviewSignals": [
+      { "code": "AMOUNT_OUTLIER", "severity": "HIGH", "field": "election.requestedCoverageCents", "message": "The requested coverage is far outside the configured product range." }
+    ]
+  },
+  {
+    "id": "sub_1056",
+    "applicant": { "name": "Sofia Rossi", "email": "sofia.rossi@harbor.example" },
+    "group": { "id": "grp_harbor", "name": "Harbor & Pine Consulting" },
+    "product": "Hospital Indemnity",
+    "coverageAmountCents": 1000000,
+    "submittedAt": "2026-11-04T08:05:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "EMPLOYMENT_STATUS",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "HP-881",
+      "dateOfBirth": "1976-08-08",
+      "phone": "+1-207-555-0181",
+      "address": { "line1": "8 Wharf Lane", "line2": null, "city": "Portland", "state": "ME", "postalCode": "04101" }
+    },
+    "employment": { "employmentStatus": "TERMINATED", "hireDate": "2016-02-08", "terminationDate": "2026-10-31", "annualSalaryCents": 9600000, "occupation": "Principal consultant", "hoursPerWeek": 40 },
+    "election": { "planName": "Hospital Indemnity", "requestedCoverageCents": 1000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "INACTIVE_EMPLOYEE", "severity": "HIGH", "field": "employment.employmentStatus", "message": "The employee was terminated before the requested effective date." }
+    ],
+    "_behavior": { "conflictOnDecision": true }
+  },
+  {
+    "id": "sub_1057",
+    "applicant": { "name": "Marcus Johnson", "email": "marcus.johnson@sol.example" },
+    "group": { "id": "grp_sol", "name": "Sol y Mar Foods" },
+    "product": "Short-Term Disability",
+    "coverageAmountCents": 145000,
+    "submittedAt": "2026-11-04T08:07:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "HOURS_BELOW_MINIMUM",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "SYM-8802",
+      "dateOfBirth": "1999-04-01",
+      "phone": "+1-305-555-0102",
+      "address": { "line1": "710 Coral Way", "line2": null, "city": "Miami", "state": "FL", "postalCode": "33145" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2026-05-04", "annualSalaryCents": 4300000, "occupation": "Warehouse associate", "hoursPerWeek": 19 },
+    "election": { "planName": "STD 60%", "requestedCoverageCents": 145000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "HOURS_BELOW_MINIMUM", "severity": "MEDIUM", "field": "employment.hoursPerWeek", "message": "The employee's scheduled hours are below the plan eligibility minimum." }
+    ]
+  },
+  {
+    "id": "sub_1058",
+    "applicant": { "name": "Ann Chen", "email": "ann.chen@lumen.example" },
+    "group": { "id": "grp_lumen", "name": "Lumen Learning Labs" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 7500000,
+    "submittedAt": "2026-11-04T09:12:01Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "LATE_ENROLLMENT",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "LLL-3301",
+      "dateOfBirth": "1993-03-17",
+      "phone": "+1-617-555-0101",
+      "address": { "line1": "4 Cambridge Center", "line2": null, "city": "Cambridge", "state": "MA", "postalCode": "02142" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2025-01-20", "annualSalaryCents": 8800000, "occupation": "Learning designer", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 7500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "LATE_ENROLLMENT", "severity": "LOW", "field": "submittedAt", "message": "The submission was received after the enrollment window closed." }
+    ]
+  },
+  {
+    "id": "sub_1059",
+    "applicant": { "name": "Anna Chen", "email": "anna.chen@lumen.example" },
+    "group": { "id": "grp_lumen", "name": "Lumen Learning Labs" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 12500000,
+    "submittedAt": "2026-11-04T09:12:04Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "LATE_ENROLLMENT",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "LLL-3302",
+      "dateOfBirth": "1995-11-29",
+      "phone": "+1-617-555-0102",
+      "address": { "line1": "4 Cambridge Center", "line2": "Floor 6", "city": "Cambridge", "state": "MA", "postalCode": "02142" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2025-08-11", "annualSalaryCents": 9400000, "occupation": "Software engineer", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 12500000, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "LATE_ENROLLMENT", "severity": "LOW", "field": "submittedAt", "message": "The submission was received after the enrollment window closed." }
+    ]
+  },
+  {
+    "id": "sub_1060",
+    "applicant": { "name": "Annalise Chen", "email": "annalise.chen@lumen.example" },
+    "group": { "id": "grp_lumen", "name": "Lumen Learning Labs" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 1500000,
+    "submittedAt": "2026-11-04T09:12:09Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "MISSING_INFORMATION",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "LLL-3303",
+      "dateOfBirth": "1990-06-20",
+      "phone": null,
+      "address": { "line1": "91 Main Street", "line2": null, "city": "Cambridge", "state": "MA", "postalCode": "02142" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2022-10-03", "annualSalaryCents": 10200000, "occupation": "Product manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Critical Illness $15K", "requestedCoverageCents": 1500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "PHONE_MISSING", "severity": "MEDIUM", "field": "employee.phone", "message": "No phone number was supplied." }
+    ]
+  },
+  {
+    "id": "sub_1061",
+    "applicant": { "name": "Ana María Torres", "email": "ana.torres@sol.example" },
+    "group": { "id": "grp_sol", "name": "Sol y Mar Foods" },
+    "product": "Accident",
+    "coverageAmountCents": 2500000,
+    "submittedAt": "2026-11-04T15:22:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "ADDRESS_MISMATCH",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "SYM-4330",
+      "dateOfBirth": "1986-09-12",
+      "phone": "+1-305-555-0130",
+      "address": { "line1": "12 Avenida del Mar", "line2": null, "city": "Miami", "state": "FL", "postalCode": "33130" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2020-12-07", "annualSalaryCents": 6300000, "occupation": "Procurement specialist", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Basic", "requestedCoverageCents": 2500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "ADDRESS_MISMATCH", "severity": "MEDIUM", "field": "employee.address", "message": "The postal code differs between the HR and enrollment records." }
+    ]
+  },
+  {
+    "id": "sub_1062",
+    "applicant": { "name": "Omar Haddad", "email": "omar.haddad@keystone.example" },
+    "group": { "id": "grp_keystone", "name": "Keystone Civic Partners" },
+    "product": "Long-Term Disability",
+    "coverageAmountCents": 510000,
+    "submittedAt": "2026-11-05T07:40:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "SALARY_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "KCP-9020",
+      "dateOfBirth": null,
+      "phone": "+1-215-555-0120",
+      "address": { "line1": "1600 Market Street", "line2": null, "city": "Philadelphia", "state": "PA", "postalCode": "19103" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2013-05-13", "annualSalaryCents": 12800000, "occupation": "Program director", "hoursPerWeek": 40 },
+    "election": { "planName": "LTD 60%", "requestedCoverageCents": 510000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "DOB_MISSING", "severity": "HIGH", "field": "employee.dateOfBirth", "message": "Date of birth is required for eligibility verification." },
+      { "code": "SALARY_MISMATCH", "severity": "MEDIUM", "field": "employment.annualSalaryCents", "message": "The submitted salary does not match the most recent HR record." }
+    ]
+  },
+  {
+    "id": "sub_1063",
+    "applicant": { "name": "Harper Smith", "email": "harper.smith@atlas.example" },
+    "group": { "id": "grp_atlas", "name": "Atlas Retail Cooperative" },
+    "product": "Hospital Indemnity",
+    "coverageAmountCents": 1500000,
+    "submittedAt": "2026-11-05T08:03:18-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "COVERAGE_MISMATCH",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "ARC-6127",
+      "dateOfBirth": "1977-01-11",
+      "phone": "+1-404-555-0127",
+      "address": { "line1": "400 Decatur Street", "line2": null, "city": "Atlanta", "state": "GA", "postalCode": "30312" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2011-03-28", "annualSalaryCents": 7600000, "occupation": "Store manager", "hoursPerWeek": 42 },
+    "election": { "planName": "Hospital Indemnity Enhanced", "requestedCoverageCents": 1500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 1000000, "effectiveDate": "2026-01-01", "policyNumber": "HI-6127" },
+    "reviewSignals": [
+      { "code": "COVERAGE_MISMATCH", "severity": "MEDIUM", "field": "existingCoverage.coverageAmountCents", "message": "Existing carrier coverage does not match the current administration record." }
+    ]
+  },
+  {
+    "id": "sub_1064",
+    "applicant": { "name": "Sam Taylor", "email": "sam.taylor@northstar.example" },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 1000000,
+    "submittedAt": "2026-11-05T08:03:18-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "TOBACCO_STATUS",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-6128",
+      "dateOfBirth": "1997-07-07",
+      "phone": "+1-425-555-0128",
+      "address": { "line1": "300 Industry Way", "line2": null, "city": "Kent", "state": "WA", "postalCode": "98032" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2026-02-16", "annualSalaryCents": 5600000, "occupation": "Machinist", "hoursPerWeek": 40 },
+    "election": { "planName": "Critical Illness $10K", "requestedCoverageCents": 1000000, "beneficiaryCount": 1, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "TOBACCO_STATUS_UNKNOWN", "severity": "MEDIUM", "field": "election.tobaccoUse", "message": "Tobacco-use status was not answered." }
+    ]
+  },
+  {
+    "id": "sub_1065",
+    "applicant": { "name": "Nia Brown", "email": "nia.brown@meridian.example" },
+    "group": { "id": "grp_meridian", "name": "Meridian Community Health" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 15000000,
+    "submittedAt": "2026-11-05T13:30:00Z",
+    "effectiveDate": "2026-02-29",
+    "reviewReason": "INVALID_EFFECTIVE_DATE",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "MCH-4009",
+      "dateOfBirth": "1981-12-15",
+      "phone": "+1-214-555-0109",
+      "address": { "line1": "500 Medical District Drive", "line2": null, "city": "Dallas", "state": "TX", "postalCode": "75235" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2019-07-01", "annualSalaryCents": 11200000, "occupation": "Clinical operations manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 15000000, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "INVALID_EFFECTIVE_DATE", "severity": "HIGH", "field": "effectiveDate", "message": "The source supplied a calendar date that does not exist." }
+    ]
+  },
+  {
+    "id": "sub_1066",
+    "applicant": { "name": "Émile Dubois", "email": "emile.dubois@harbor.example" },
+    "group": { "id": "grp_harbor", "name": "Harbor & Pine Consulting" },
+    "product": "Accident",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-05T15:12:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "IDENTITY_MISMATCH",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "HP-991",
+      "dateOfBirth": "1988-10-02",
+      "phone": "+1-207-555-0191",
+      "address": { "line1": "77 Commercial Street", "line2": null, "city": "Portland", "state": "ME", "postalCode": "04101" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2024-04-22", "annualSalaryCents": 8600000, "occupation": "Business analyst", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Plus", "requestedCoverageCents": 5000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "NAME_NORMALIZATION", "severity": "LOW", "field": "applicant.name", "message": "The HR record omits the accent in the applicant's name." }
+    ]
+  },
+  {
+    "id": "sub_1067",
+    "applicant": { "name": "Taylor Nguyen", "email": "taylor.nguyen@keystone.example" },
+    "group": { "id": "grp_keystone", "name": "Keystone Civic Partners" },
+    "product": "Short-Term Disability",
+    "coverageAmountCents": 225000,
+    "submittedAt": "2026-11-06T08:00:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "WAITING_PERIOD",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "KCP-3007",
+      "dateOfBirth": "2000-05-18",
+      "phone": "+1-215-555-0107",
+      "address": { "line1": "201 Arch Street", "line2": null, "city": "Philadelphia", "state": "PA", "postalCode": "19106" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2026-12-15", "annualSalaryCents": 6750000, "occupation": "Policy associate", "hoursPerWeek": 40 },
+    "election": { "planName": "STD 60%", "requestedCoverageCents": 225000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "WAITING_PERIOD", "severity": "MEDIUM", "field": "employment.hireDate", "message": "The requested effective date may occur before the eligibility waiting period ends." }
+    ]
+  },
+  {
+    "id": "sub_1068",
+    "applicant": { "name": "Avery Wilson", "email": "avery.wilson@canyon.example" },
+    "group": { "id": "grp_canyon", "name": "Canyon Ridge Hospitality" },
+    "product": "Hospital Indemnity",
+    "coverageAmountCents": null,
+    "submittedAt": "2026-11-06T08:01:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "MISSING_INFORMATION",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "CRH-7701",
+      "dateOfBirth": "1992-12-09",
+      "phone": "+1-702-555-0101",
+      "address": { "line1": "650 Paradise Road", "line2": null, "city": "Las Vegas", "state": "NV", "postalCode": "89169" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2023-09-05", "annualSalaryCents": 6400000, "occupation": "Guest services supervisor", "hoursPerWeek": 40 },
+    "election": { "planName": "Hospital Indemnity", "requestedCoverageCents": null, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "COVERAGE_MISSING", "severity": "HIGH", "field": "election.requestedCoverageCents", "message": "No coverage amount was included in the election." }
+    ]
+  },
+  {
+    "id": "sub_1069",
+    "applicant": { "name": "Morgan Davis", "email": "morgan.davis@atlas.example" },
+    "group": { "id": "grp_atlas", "name": "Atlas Retail Cooperative" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 12500000,
+    "submittedAt": null,
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "MISSING_INFORMATION",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "ARC-2210",
+      "dateOfBirth": "1983-05-10",
+      "phone": "+1-404-555-0110",
+      "address": { "line1": "55 Auburn Avenue", "line2": null, "city": "Atlanta", "state": "GA", "postalCode": "30303" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2014-08-18", "annualSalaryCents": 8300000, "occupation": "Inventory manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 12500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 10000000, "effectiveDate": "2026-01-01", "policyNumber": "ARC-VL-2210" },
+    "reviewSignals": [
+      { "code": "SUBMISSION_TIME_MISSING", "severity": "HIGH", "field": "submittedAt", "message": "The source system did not provide a submission timestamp." }
+    ]
+  },
+  {
+    "id": "sub_1070",
+    "applicant": { "name": "Riley Adams", "email": "riley.adams@lumen.example" },
+    "group": { "id": "grp_lumen", "name": "Lumen Learning Labs" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 3000000,
+    "submittedAt": "2026-11-06T16:30:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "COVERAGE_MISMATCH",
+    "priority": "URGENT",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "LLL-1107",
+      "dateOfBirth": "1975-04-23",
+      "phone": "+1-617-555-0107",
+      "address": { "line1": "100 Technology Square", "line2": null, "city": "Cambridge", "state": "MA", "postalCode": "02139" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2010-01-04", "annualSalaryCents": 15400000, "occupation": "Chief learning officer", "hoursPerWeek": 40 },
+    "election": { "planName": "Critical Illness $30K", "requestedCoverageCents": 3000000, "beneficiaryCount": 2, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 1500000, "effectiveDate": "2026-01-01", "policyNumber": "LLL-CI-1107" },
+    "reviewSignals": [
+      { "code": "COVERAGE_MISMATCH", "severity": "CRITICAL", "field": "existingCoverage.coverageAmountCents", "message": "The carrier and administration records disagree on current coverage." }
+    ]
+  },
+  {
+    "id": "sub_1071",
+    "applicant": { "name": "Casey Martin", "email": "casey.martin@keystone.example" },
+    "group": { "id": "grp_keystone", "name": "Keystone Civic Partners" },
+    "product": "Accident",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-07T07:05:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DUPLICATE_RECORD",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "KCP-0088",
+      "dateOfBirth": "1989-08-31",
+      "phone": "+1-215-555-0188",
+      "address": { "line1": "30 South 15th Street", "line2": null, "city": "Philadelphia", "state": "PA", "postalCode": "19102" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2022-02-28", "annualSalaryCents": 7900000, "occupation": "Community engagement manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Plus", "requestedCoverageCents": 5000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "POSSIBLE_DUPLICATE", "severity": "MEDIUM", "field": "employee.employeeId", "message": "This submission shares contact information with another pending record." }
+    ]
+  },
+  {
+    "id": "sub_1072",
+    "applicant": { "name": "Casey Martin", "email": "casey.martin@keystone.example" },
+    "group": { "id": "grp_keystone", "name": "Keystone Civic Partners" },
+    "product": "Accident",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-07T07:05:00-05:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DUPLICATE_RECORD",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "KCP-0088-R",
+      "dateOfBirth": "1989-08-31",
+      "phone": "+1-215-555-0188",
+      "address": { "line1": "30 South 15th Street", "line2": null, "city": "Philadelphia", "state": "PA", "postalCode": "19102" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2022-02-28", "annualSalaryCents": 7900000, "occupation": "Community engagement manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Plus", "requestedCoverageCents": 5000000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "POSSIBLE_DUPLICATE", "severity": "MEDIUM", "field": "employee.employeeId", "message": "This submission shares all visible queue values with another pending record." }
+    ]
+  },
+  {
+    "id": "sub_1073",
+    "applicant": { "name": "Jamie Park", "email": "jamie.park@northstar.example" },
+    "group": { "id": "grp_northstar", "name": "Northstar Fabrication" },
+    "product": "Short-Term Disability",
+    "coverageAmountCents": 195000,
+    "submittedAt": "2026-11-07T10:19:40-08:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "SALARY_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "NS-8901",
+      "dateOfBirth": "1991-01-14",
+      "phone": "+1-425-555-0101",
+      "address": { "line1": "819 Central Avenue", "line2": null, "city": "Kent", "state": "WA", "postalCode": "98032" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2021-04-26", "annualSalaryCents": 6500000, "occupation": "Safety specialist", "hoursPerWeek": 40 },
+    "election": { "planName": "STD 60%", "requestedCoverageCents": 195000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "SALARY_MISMATCH", "severity": "HIGH", "field": "employment.annualSalaryCents", "message": "Benefit calculation uses a salary that differs from the HRIS value." }
+    ]
+  },
+  {
+    "id": "sub_1074",
+    "applicant": { "name": "Drew Robinson", "email": "drew.robinson@atlas.example" },
+    "group": { "id": "grp_atlas", "name": "Atlas Retail Cooperative" },
+    "product": "Voluntary Life",
+    "coverageAmountCents": 5000000,
+    "submittedAt": "2026-11-07T20:59:59-08:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "BENEFICIARY_MISSING",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "ARC-4014",
+      "dateOfBirth": "2001-09-09",
+      "phone": "+1-404-555-0114",
+      "address": { "line1": "112 Edgewood Avenue", "line2": null, "city": "Atlanta", "state": "GA", "postalCode": "30303" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2026-06-01", "annualSalaryCents": 4900000, "occupation": "Assistant store manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Employee Voluntary Life", "requestedCoverageCents": 5000000, "beneficiaryCount": 0, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "BENEFICIARY_MISSING", "severity": "LOW", "field": "election.beneficiaryCount", "message": "No beneficiary was included with the life election." }
+    ]
+  },
+  {
+    "id": "sub_1075",
+    "applicant": { "name": "Ibrahim Diallo", "email": "ibrahim.diallo@meridian.example" },
+    "group": { "id": "grp_meridian", "name": "Meridian Community Health" },
+    "product": "Hospital Indemnity",
+    "coverageAmountCents": 2000000,
+    "submittedAt": "2026-11-08T05:44:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "DEPENDENT_ELIGIBILITY",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "MCH-6675",
+      "dateOfBirth": "1980-03-19",
+      "phone": "+1-214-555-0175",
+      "address": { "line1": "2500 Stemmons Freeway", "line2": null, "city": "Dallas", "state": "TX", "postalCode": "75207" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2018-11-12", "annualSalaryCents": 7150000, "occupation": "Patient services manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Hospital Indemnity Family", "requestedCoverageCents": 2000000, "beneficiaryCount": 4, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "DEPENDENT_AGE", "severity": "MEDIUM", "field": "election", "message": "One dependent may exceed the plan's age limit." }
+    ]
+  },
+  {
+    "id": "sub_1076",
+    "applicant": { "name": "Aiko Tanaka", "email": "aiko.tanaka@lumen.example" },
+    "group": { "id": "grp_lumen", "name": "Lumen Learning Labs" },
+    "product": "Critical Illness",
+    "coverageAmountCents": 2500000,
+    "submittedAt": "2026-11-08T09:08:00+09:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "COVERAGE_MISMATCH",
+    "priority": "HIGH",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "LLL-7160",
+      "dateOfBirth": "1987-11-01",
+      "phone": "+1-617-555-0160",
+      "address": { "line1": "500 Memorial Drive", "line2": null, "city": "Cambridge", "state": "MA", "postalCode": "02139" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2020-09-14", "annualSalaryCents": 11900000, "occupation": "Engineering manager", "hoursPerWeek": 40 },
+    "election": { "planName": "Critical Illness $25K", "requestedCoverageCents": 2500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": { "coverageAmountCents": 1000000, "effectiveDate": "2026-01-01", "policyNumber": "LLL-CI-7160" },
+    "reviewSignals": [
+      { "code": "COVERAGE_MISMATCH", "severity": "HIGH", "field": "existingCoverage.coverageAmountCents", "message": "The requested election conflicts with an existing carrier amount." }
+    ]
+  },
+  {
+    "id": "sub_1077",
+    "applicant": { "name": "Chris Green", "email": "chris.green@canyon.example" },
+    "group": { "id": "grp_canyon", "name": "Canyon Ridge Hospitality" },
+    "product": "Accident",
+    "coverageAmountCents": 2500000,
+    "submittedAt": "2026-11-08T11:59:00-07:00",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "ADDRESS_MISMATCH",
+    "priority": "LOW",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "CRH-5010",
+      "dateOfBirth": "1996-02-28",
+      "phone": "+1-702-555-0110",
+      "address": { "line1": "1 <North & South> Plaza", "line2": null, "city": "Las Vegas", "state": "NV", "postalCode": "89101" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2024-07-15", "annualSalaryCents": 5700000, "occupation": "Front desk lead", "hoursPerWeek": 40 },
+    "election": { "planName": "Accident Basic", "requestedCoverageCents": 2500000, "beneficiaryCount": 1, "tobaccoUse": false },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "ADDRESS_MISMATCH", "severity": "LOW", "field": "employee.address", "message": "Street formatting differs between source systems." }
+    ]
+  },
+  {
+    "id": "sub_1078",
+    "applicant": { "name": "Léa Martin", "email": "lea.martin@harbor.example" },
+    "group": { "id": "grp_harbor", "name": "Harbor & Pine Consulting" },
+    "product": "Long-Term Disability",
+    "coverageAmountCents": 375000,
+    "submittedAt": "2026-11-08T18:14:00Z",
+    "effectiveDate": "2027-01-01",
+    "reviewReason": "SALARY_MISMATCH",
+    "priority": "MEDIUM",
+    "status": "NEEDS_REVIEW",
+    "employee": {
+      "employeeId": "HP-1250",
+      "dateOfBirth": "1992-07-30",
+      "phone": "+1-207-555-0150",
+      "address": { "line1": "18 Exchange Street", "line2": null, "city": "Portland", "state": "ME", "postalCode": "04101" }
+    },
+    "employment": { "employmentStatus": "ACTIVE", "hireDate": "2023-03-20", "annualSalaryCents": 9700000, "occupation": "Senior consultant", "hoursPerWeek": 40 },
+    "election": { "planName": "LTD 60%", "requestedCoverageCents": 375000, "beneficiaryCount": 0, "tobaccoUse": null },
+    "existingCoverage": null,
+    "reviewSignals": [
+      { "code": "SALARY_MISMATCH", "severity": "MEDIUM", "field": "employment.annualSalaryCents", "message": "The salary used for the benefit calculation is older than the current HR record." }
+    ]
+  }
+]
