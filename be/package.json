@@ -1,0 +1,18 @@
+{
+  "name": "checkout-rewards-service",
+  "version": "1.0.0",
+  "description": "Reliable checkout and rewards service",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc && node --test dist/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
