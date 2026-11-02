@@ -1,6 +1,7 @@
 const express = require('express');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const checkoutRoutes = require('./routes/checkoutRoutes');
 const AppError = require('./utils/AppError');
 
 const app = express();
@@ -13,6 +14,7 @@ app.get('/health', (req, res) => {
 
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
+app.use('/', checkoutRoutes);
 
 app.use((err, req, res, next) => {
   if (err instanceof AppError) {
@@ -29,6 +31,15 @@ app.use((err, req, res, next) => {
       error: {
         code: 'INVALID_ID',
         message: 'Invalid id',
+      },
+    });
+  }
+
+  if (err?.code === 'ORDER_NOT_FOUND' || err?.code === 'CART_NOT_FOUND') {
+    return res.status(err.statusCode || 404).json({
+      error: {
+        code: err.code,
+        message: err.message,
       },
     });
   }
