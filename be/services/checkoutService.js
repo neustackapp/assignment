@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Cart = require('../models/Cart');
 const Product = require('../models/Product');
 const Order = require('../models/Order');
+const Coupon = require('../models/Coupon');
 const AppError = require('../utils/AppError');
 
 function serializeOrder(order) {
@@ -23,7 +24,7 @@ function serializeOrder(order) {
   };
 }
 
-async function checkout(cartId) {
+async function checkout(cartId, couponCode) {
   let result;
 
   await mongoose.startSession().then(async (session) => {
@@ -88,6 +89,31 @@ async function checkout(cartId) {
         subtotal += item.lineTotal;
       }
 
+      let appliedCoupon = null;
+      let orderId = null;
+
+      if (couponCode) {
+        // We lock the coupon and the new order to the same transaction so a later rollback clears both together.
+        orderId = new mongoose.Types.ObjectId();
+        const claimedCoupon = await Coupon.findOneAndUpdate(
+          { code: couponCode, status: 'available' },
+          { status: 'redeemed', redeemedByOrder: orderId },
+          { new: true, session }
+        );
+
+        if (!claimedCoupon) {
+          const couponExists = await Coupon.findOne({ code: couponCode }).session(session);
+
+          if (!couponExists) {
+            throw new AppError(404, 'COUPON_NOT_FOUND', 'Coupon not found');
+          }
+
+          throw new AppError(409, 'COUPON_ALREADY_REDEEMED', 'Coupon already redeemed');
+        }
+
+        appliedCoupon = claimedCoupon;
+      }
+
       for (const item of claimedCart.items) {
         const product = productMap.get(item.product.toString());
         if (!product) {
@@ -109,16 +135,30 @@ async function checkout(cartId) {
         }
       }
 
-      const order = await Order.create([
-        {
-          cart: claimedCart._id,
-          items: itemSnapshots,
-          subtotal,
-          discount: 0,
-          total: subtotal,
-          couponCode: null,
-        },
-      ], { session });
+      let discount = 0;
+      let total = subtotal;
+      let finalCouponCode = null;
+
+      if (appliedCoupon) {
+        discount = Math.min(subtotal, Math.floor((subtotal * appliedCoupon.discountPercent) / 100));
+        total = subtotal - discount;
+        finalCouponCode = appliedCoupon.code;
+      }
+
+      const order = await Order.create(
+        [
+          {
+            _id: orderId || new mongoose.Types.ObjectId(),
+            cart: claimedCart._id,
+            items: itemSnapshots,
+            subtotal,
+            discount,
+            total,
+            couponCode: finalCouponCode,
+          },
+        ],
+        { session }
+      );
 
       result = { replay: false, order: serializeOrder(order[0]) };
     });

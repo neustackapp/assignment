@@ -3,7 +3,8 @@ const Order = require('../models/Order');
 
 async function checkoutCart(req, res, next) {
   try {
-    const result = await checkoutService.checkout(req.params.cartId);
+    const couponCode = typeof req.body?.couponCode === 'string' ? req.body.couponCode.trim().toUpperCase() : null;
+    const result = await checkoutService.checkout(req.params.cartId, couponCode || null);
 
     if (result.replay) {
       return res.status(200).json(result.order);

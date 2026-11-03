@@ -2,6 +2,7 @@ const express = require('express');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const checkoutRoutes = require('./routes/checkoutRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 const AppError = require('./utils/AppError');
 
 const app = express();
@@ -12,6 +13,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+app.use('/admin', adminRoutes);
 app.use('/products', productRoutes);
 app.use('/carts', cartRoutes);
 app.use('/', checkoutRoutes);
