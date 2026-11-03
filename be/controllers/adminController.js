@@ -1,4 +1,5 @@
 const couponService = require('../services/couponService');
+const reportService = require('../services/reportService');
 
 async function generateCoupon(req, res, next) {
   try {
@@ -16,6 +17,16 @@ async function generateCoupon(req, res, next) {
   }
 }
 
+async function getReport(req, res, next) {
+  try {
+    const report = await reportService.getReport();
+    return res.status(200).json(report);
+  } catch (error) {
+    return next(error);
+  }
+}
+
 module.exports = {
   generateCoupon,
+  getReport,
 };
