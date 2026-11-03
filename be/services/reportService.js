@@ -58,10 +58,10 @@ async function getReport() {
   for (const item of couponSummary || []) {
     if (item._id === 'available') couponCounts.available = item.count;
     if (item._id === 'redeemed') couponCounts.redeemed = item.count;
-    if (item._id === 'generated') couponCounts.generated = item.count;
   }
 
-  // This is a read-only summary derived from the snapshots already stored on each order and the coupon states.
+  couponCounts.generated = couponCounts.available + couponCounts.redeemed;
+
   return {
     totalOrders: summary.totalOrders,
     grossRevenue: summary.grossRevenue,

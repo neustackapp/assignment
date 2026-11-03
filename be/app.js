@@ -28,20 +28,11 @@ app.use((err, req, res, next) => {
     });
   }
 
-  if (err?.name === 'CastError' || /Cast to ObjectId failed|invalid id/i.test(err?.message || '')) {
+  if (err?.name === 'CastError') {
     return res.status(400).json({
       error: {
         code: 'INVALID_ID',
         message: 'Invalid id',
-      },
-    });
-  }
-
-  if (err?.code === 'ORDER_NOT_FOUND' || err?.code === 'CART_NOT_FOUND') {
-    return res.status(err.statusCode || 404).json({
-      error: {
-        code: err.code,
-        message: err.message,
       },
     });
   }

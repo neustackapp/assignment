@@ -86,6 +86,4 @@ const orderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-orderSchema.index({ cart: 1 }, { unique: true });
-
 module.exports = mongoose.model('Order', orderSchema);

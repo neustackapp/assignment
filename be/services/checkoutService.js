@@ -26,8 +26,9 @@ function serializeOrder(order) {
 
 async function checkout(cartId, couponCode) {
   let result;
+  const session = await mongoose.startSession();
 
-  await mongoose.startSession().then(async (session) => {
+  try {
     await session.withTransaction(async () => {
       const claimedCart = await Cart.findOneAndUpdate(
         { _id: cartId, status: 'open' },
@@ -162,9 +163,9 @@ async function checkout(cartId, couponCode) {
 
       result = { replay: false, order: serializeOrder(order[0]) };
     });
-
+  } finally {
     await session.endSession();
-  });
+  }
 
   return result;
 }

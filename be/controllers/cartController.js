@@ -20,7 +20,7 @@ async function getCart(req, res, next) {
 
 async function addItem(req, res, next) {
   try {
-    const { productId, quantity } = req.body;
+    const { productId, quantity } = req.body ?? {};
     const cart = await cartService.addItemToCart(req.params.cartId, productId, quantity);
     res.status(201).json(cart);
   } catch (error) {
@@ -30,7 +30,7 @@ async function addItem(req, res, next) {
 
 async function updateItemQuantity(req, res, next) {
   try {
-    const { quantity } = req.body;
+    const { quantity } = req.body ?? {};
     const cart = await cartService.updateCartItemQuantity(req.params.cartId, req.params.productId, quantity);
     res.json(cart);
   } catch (error) {

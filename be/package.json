@@ -1,7 +1,7 @@
 {
   "name": "be",
   "version": "1.0.0",
-  "description": "This is the backend for an ecommerce store. Customers create carts, add products, and check out. The store rewards purchasing activity by making a discount coupon available after every *n*th successfully placed order.",
+  "description": "Checkout and rewards backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

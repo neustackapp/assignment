@@ -1,5 +1,6 @@
 const checkoutService = require('../services/checkoutService');
 const Order = require('../models/Order');
+const AppError = require('../utils/AppError');
 
 async function checkoutCart(req, res, next) {
   try {
@@ -21,7 +22,7 @@ async function getOrder(req, res, next) {
     const order = await Order.findById(req.params.orderId).lean();
 
     if (!order) {
-      return next({ statusCode: 404, code: 'ORDER_NOT_FOUND', message: 'Order not found' });
+      throw new AppError(404, 'ORDER_NOT_FOUND', 'Order not found');
     }
 
     return res.json({
